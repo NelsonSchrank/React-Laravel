@@ -1,0 +1,216 @@
+.carousel {
+  margin: 0 auto;
+  // clip-path: polygon(0% 0%, 0% 80%, 10% 83.6%, 20% 86.5%, 25% 87.9%, 30% 89.4%, 35% 90.4%, 40% 91.1%, 45% 91.6%, 50% 91.7%, 55% 91.6%, 60% 91.1%, 65% 90.4%, 70% 89.4%, 75% 87.9%, 80% 86.5%, 90% 83.6%, 100% 80%, 100% 5%, 90% 7.5%, 80% 10%, 70% 12%, 65% 13%, 60% 13.8%, 55% 14.2%, 50% 14.4%, 45% 14.2%, 40% 13.8%, 35% 13%, 30% 12%, 20% 10%, 10% 7.5%, 0% 5%);
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 190px;
+    top: -20px;
+    left: 0;
+    background-image: url('../../media/top-mask.svg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    @media screen and (max-width: 1601px) {
+      height: 164px;
+    }
+    @media screen and (max-width: 1441px) {
+      height: 144px;
+    }
+    @media screen and (max-width: 1201px) {
+      height: 124px;
+    }
+    @media screen and (max-width: 993px) {
+      height: 96px;
+    }
+    @media screen and (max-width: 915px) {
+      height: 92px;
+    }
+    @media screen and (max-width: 769px) {
+      height: 76px;
+    }
+    @media screen and (max-width: 577px) {
+      height: 58px;
+    }
+    @media screen and (max-width: 481px) {
+      height: 58px;
+    }
+    @media screen and (max-width: 376px) {
+      height: 46px;
+    }
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 207px;
+    left: 0;
+    bottom: 0;
+    background-image: url('../../media//bottom-mask.svg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    @media screen and (max-width: 1601px) {
+      height: 160px;
+    }
+    @media screen and (max-width: 1441px) {
+      height: 166px;
+    }
+    @media screen and (max-width: 1381px) {
+      height: 140px;
+    }
+    @media screen and (max-width: 1201px) {
+      height: 128px;
+    }
+    @media screen and (max-width: 993px) {
+      height: 110px;
+    }
+    @media screen and (max-width: 915px) {
+      height: 100px;
+    }
+    @media screen and (max-width: 769px) {
+      height: 80px;
+    }
+    @media screen and (max-width: 577px) {
+      height: 64px;
+    }
+    @media screen and (max-width: 481px) {
+      height: 58px;
+    }
+    @media screen and (max-width: 376px) {
+      height: 46px;
+    }
+  }
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0,0,0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media screen and (max-width: 1601px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @media screen and (max-width: 1441px) {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  @media screen and (max-width: 1201px) {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+  @media screen and (max-width: 993px) {
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+  @media screen and (max-width: 915px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  [dir="rtl"] & {
+      float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
